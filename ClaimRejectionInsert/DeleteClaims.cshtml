@@ -1,0 +1,49 @@
+﻿@model ClaimRejectionInsert_DOTNET.Models.Claim
+
+
+<div class="row justify-content-md-right">
+    <div class="col-lg-12">
+        <a asp-controller="Home" asp-action="CreateClaims" class="btn btn-group btn-info" id="createButton">CreateClaims</a>
+        <a asp-controller="Home" asp-action="GetAllClaims" class="btn btn-group  btn-info" id="createButton">GetAllClaims</a>
+    </div>
+</div>
+
+
+<h3 id="confirmDeleteHeading">Confirm these reject claim deletes..</h3>
+<div>
+    <hr />
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th> @Html.DisplayNameFor(model => model.Id)</th>
+                <th> @Html.DisplayNameFor(model => model.ClaimId)</th>
+                <th> @Html.DisplayNameFor(model => model.CreatedBy)</th>
+                <th> @Html.DisplayNameFor(model => model.CreatedDate)</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tr>
+            <td>  @Html.DisplayFor(model => model.Id)</td>
+            <td>  @Html.DisplayFor(model => model.ClaimId)</td>
+            <td>  @Html.DisplayFor(model => model.CreatedBy)</td>
+            <td>  @Html.DisplayFor(model => model.CreatedDate)</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+
+
+    <form asp-controller="Home" asp-action="DeleteClaimsConfirm" asp-route-claimId=@Model.ClaimId method="post">
+
+        <button type="submit" value="Save" class="btn btn-danger">DELETE</button>
+
+
+        <div class="col-md-offset-2 col-md-10" style="color:green">
+            @ViewBag.Message
+        </div>
+    </form>
+
+</div>

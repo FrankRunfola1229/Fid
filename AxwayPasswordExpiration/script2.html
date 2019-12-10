@@ -1,0 +1,25 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <script
+         src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <h1>AXWAY USER ACCOUNT PROGRAM</h1>
+      <table></table>
+      <script>
+         const Http3 = new XMLHttpRequest();
+         const url2 = "https://prd-axwftp0010:444/api/v1.4/accounts";
+         Http3.open("GET", url2, true);
+         Http3.send();
+         Http3.onreadystatechange = (e) => {
+         
+         let jsonResponse = JSON.parse(Http3.responseText);
+         
+         console.log(jsonResponse.users[0].name +"  " + 
+          jsonResponse.users[0].passwordCredentials.lastPasswordChange+"   " + jsonResponse.users[0].passwordCredentials.lastLogin);
+         }
+      </script>
+   </body>
+</html>

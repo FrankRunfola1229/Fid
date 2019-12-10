@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ClaimRejectionInsert_DOTNET</title>
+
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md fixed-top bg-primary">
+        <img style="width: 200px;" src="~/images/fidelis.png">
+        <ul class="nav nav-tabs">
+            <li class="nav-item active"> <a asp-controller="Home" asp-action="TableSelect" class="nav-link">Home</a>   </li>
+        </ul>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script>
+        $("#checkAll").click(function () {
+            $(".check").prop('checked', $(this).prop('checked'));
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+
+
+<div>
+    <h2>
+        @ViewBag.Message
+    </h2>
+</div>
+<hr />
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-lg-2">
+            <a asp-controller="Home" asp-action="CreateClaims" class="btn btn-group btn-primary"> Create Claims  </a>
+        </div>
+        <div class="col-lg-2">
+            <a asp-controller="Home" asp-action="GetAllClaims" class="btn btn-group  btn-primary">View All Claims  </a>
+        </div>
+    </div>
+</div>
+
+
+<br />
+
+
+

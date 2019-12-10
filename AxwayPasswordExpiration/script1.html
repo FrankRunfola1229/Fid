@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+ 
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+ 
+ 
+        <h1>AXWAY USER ACCOUNT PROGRAM</h1>
+        <table id="table">
+        </table>
+ 
+        <script>
+ 
+            var username = 'adminfrunfola'
+            var password = 'Adalina4go!'
+        
+            function make_base_auth(user, password) {
+                var tok = user + ':' + password;
+                var hash = btoa(tok);
+                return "Basic " + hash;
+            }
+        
+            $.ajax
+                ({
+                    type: "GET",
+                    url: "https://jsonplaceholder.typicode.com/users", //</script> "https://prd-axwftp0010:444/api/v1.4/accounts/",
+                    dataType: 'json',
+                    async: true,
+                    data: '{}',
+                    
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader('Authorization', make_base_auth(username, password));
+                    },
+                    success: function (resp) {
+                        var len = resp.length;               
+                    console.log("Length =" + len);    
+                        
+                        for (var i = 0; i < len; i++) {  
+                            JSON.stringify(resp)
+                            console.log(resp[i])                  
+                        console.log(JSON.stringify(resp[i]));
+        
+                            var tr = $('<tr>');
+                            tr.append("<td>" + resp[i].id + "</td>");
+                            tr.append("<td>" + resp[i].name + "</td>");
+                            tr.append("<td>" + resp[i].phone + "</td>");
+                            tr.append("<td>" + resp[i].username + "</td>");
+                            $('#table').append(tr);
+                        }
+                    }
+                });
+            
+                /**
+                * const Http = new XMLHttpRequest();
+                    const url = 'https://prd-axwftp0010:444/api/v1.4/accounts/';
+                    Http.open("GET", url);
+                    Http.send();
+                    Http.onreadystatechange = (e) => {
+                        console.log(Http.responseText)
+                    }
+                **/
+        
+        </script>
+    </body>
+</html>

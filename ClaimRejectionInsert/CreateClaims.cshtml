@@ -1,0 +1,45 @@
+﻿@model ClaimRejectionInsert_DOTNET.Models.ClaimsSubmission
+
+
+@{
+    ViewData["Title"] = "Create Claims";
+}
+
+<p>
+    <a asp-controller="Home" asp-action="GetAllClaims" asp-route-tableName=@ViewBag.tableName
+       class="btn btn-info" id="createButton">View submitted claim rejects</a>
+</p>
+<br />
+<br />
+
+<hr />
+<h1>Submit Claim Rejects for <strong>@ViewBag.tableName </strong></h1>
+<hr />
+<br />
+
+<form asp-controller="Home" asp-action="CreateClaims" asp-route-tableName=@ViewBag.tableName method="post">
+
+    <div class="form-group">
+        <textarea asp-for="ClaimsString" rows="15" cols="50" placeholder="Enter Reject Claims here.."></textarea>
+    </div>
+
+    <span asp-validation-for="ClaimsString" class=" col-md-offset-2 col-md-10 text-danger font-weight-bold"></span>
+
+    <div class="col-md-offset-2 col-md-10 font-weight-bold" style="color:green">
+        @Html.Raw(@ViewBag.Message)
+    </div>
+
+    <br />
+    <div class="form-group">
+        <button type="submit" value="Save" class="btn btn-primary">Submit</button>
+    </div>
+
+
+
+</form>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "TableSelect";
+}
+
+<h1>Select a table..</h1>
+<hr />
+
+
+<div id="tableSelectContainer" class="container">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-6 col-sm-6 d-flex">
+
+            <div class="row justify-content-md-center">
+                <div class="col-lg-4 col-sm-6">
+                    <a asp-controller="Home" asp-action="CreateClaims"  asp-route-tableName="XC PROV NAME"class="btn btn-group btn-primary">
+                        <h3>XC PROV NAME</h3>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a asp-controller="Home" asp-action="CreateClaims" asp-route-tableName="XC PROV NPI" class="btn btn-group btn-primary">
+                        <h3>XC PROV NPI</h3>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a asp-controller="Home" asp-action="CreateClaims"asp-route-tableName="XC TAX_ID" class="btn btn-group btn-primary">
+                        <h3>XC TAX_ID</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
