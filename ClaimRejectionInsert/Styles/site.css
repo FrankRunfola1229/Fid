@@ -1,0 +1,233 @@
+
+#loadContainer {
+    height: 5px;
+    background-color: mediumturquoise;
+    text-align: center;
+}
+
+.card-body {
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+.insertClaimButton {
+    font-weight: 500;
+    width: 80px;
+    height: 50px;
+    white-space: normal;
+    text-decoration: solid;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightseagreen;
+    padding: 3px 20px;
+    color: white;
+    box-shadow: 5px 55px 50px -20px #b6b6b6;
+    margin-bottom: 50px;
+}
+
+.tableSelectContainer {
+    background-color: whitesmoke;
+    margin-top: 1.0rem;
+    margin-bottom: 10rem;
+    padding: 1rem;
+    box-shadow: 5px 55px 50px -20px #b6b6b6;
+}
+
+.alert {
+    margin-bottom:.5rem;
+}
+.deadlineContainer {
+    background-color: inherit;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    width: 850px;
+    background-color: white;
+    text-align: center;
+    /* padding:10px; */
+}
+
+
+.indexRow {
+    padding-bottom: 50px
+}
+
+
+
+.getAllClaimsTopContainer {
+    width: 2rem;
+    text-align: center;
+}
+
+.btnSubmit {
+    width: 10%;
+    border-radius: 1rem;
+    padding: 3.5%;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 0%;
+}
+
+.login-form-1 .btnSubmit {
+    margin-top: 10%;
+    margin-bottom: 0%;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+    width: 13rem;
+}
+
+hr {
+    /* width: 900px; */
+}
+
+#SubmitButton .btn {
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.alert {
+    text-align: center;
+    padding: 5px;
+}
+
+.alert-danger {
+    color: red;
+}
+
+.myAlertDelete {
+    width: auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.myAlertDup, .myAlertInvalid {
+    width: 75%;
+    text-align: start;
+    padding: 5px;
+}
+
+
+
+#claimCountContainer {
+    text-align: center;
+    font-size: 40px;
+}
+
+form {
+    display: inline-block;
+}
+
+.form-group {
+    margin-bottom: .5rem;
+    line-height: 2rem;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+#confirmDeleteHeading {
+    font: bold red;
+    color: red;
+}
+
+
+.table th, .table td {
+    padding: .50rem;
+}
+
+.table-bordered {
+    margin-top: 10px;
+    white-space: nowrap;
+    align-content: center;
+    width: 1%;
+}
+
+
+#username {
+    margin-bottom: 1.5rem;
+}
+
+.login-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+    .login-container form {
+        padding: 5%;
+        margin-bottom: 0;
+    }
+
+.login-form-1 {
+    padding: 5%;
+    margin-bottom: 0%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.9), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+body {
+    margin-top: 5.5rem;
+    background-color: mediumturquoise;
+}
+
+#loadingGears {
+    position: relative;
+    height: 80px;
+}
+
+.gear {
+    position: absolute;
+    /* z-index: -10; */
+    width: 40px;
+    height: 40px;
+    animation: spin 5s infinite;
+}
+
+.two {
+    left: 40px;
+    width: 80px;
+    height: 80px;
+    animation: spin-reverse 5s infinite;
+}
+
+.three {
+    top: 45px;
+    left: -10px;
+    width: 60px;
+    height: 60px;
+}
+
+@keyframes spin {
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-reverse {
+    50% {
+        transform: rotate(-360deg);
+    }
+}
+
+#loadingSpinner {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("http://i.stack.imgur.com/MnyxU.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}

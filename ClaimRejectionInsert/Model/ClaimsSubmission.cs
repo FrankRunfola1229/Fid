@@ -11,27 +11,26 @@ namespace ClaimRejectionInsert_DOTNET.Models
         [Required]
         public string ClaimsString { get; set; }
 
-        public List<string> ClaimDups { get; set; }
-
+        public List<string> DupClaimList { get; set; }
+        public List<string> InvalidClaimList { get; set; }
         public List<Claim> ClaimList { get; set; }
 
         public ClaimsSubmission()
         {
+            InvalidClaimList = new List<string>();
+            DupClaimList = new List<string>();
             ClaimList = new List<Claim>();
-            ClaimDups = new List<string>();
         }
 
         public void SetClaims()
         {
-            string[] claimsString = ClaimsString.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] claimsString = ClaimsString.Split(new char[] { '\r', '\n',' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var claim in claimsString)
             {
                 ClaimList.Add(new Claim() { ClaimId = claim });
             }
         }
-
-
 
     }
 

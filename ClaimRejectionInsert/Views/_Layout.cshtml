@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Claim Rejection Insert</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+    <link href="https://d2599kud7uucku.cloudfront.net/themes/h2/generic.css?v=8.5.4" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div class="navbar d-flex justify-content-between fixed-top ">
+        <div class="col-lg-3">
+            <div class="navbar-nav">
+                <div class="navbar-nav-scroll"></div>
+                <ul class="navbar-nav bd-navbar-nav flex-row">
+                    <li class="nav-item active">
+                        <img src="~/images/fidelisCareWhite.png" style="width: 80px; padding-right:15px;">
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-5 text-center ">
+            <div id="navbarBrand" class="navbar-brand" style="padding-right: 100px;">
+                <h1>XC Claim Reject Staging</h1>
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            @if (@ViewBag.IsAuthenticated == "FALSE")
+            {
+                <div class="alert alert-danger w-75">
+                    <h6>@ViewBag.UserAuthMessage</h6>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-primary w-75">
+                    <h6>@ViewBag.UserAuthMessage</h6>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!--
+    <div id="loadContainer" class="container">
+        <img src="/images/loading.gif" width="100" height="100" style="position:fixed; z-index:4;" />
+    </div>
+    -->
+
+    <div class="deadlineContainer">
+        <div class="py-0  row justify-content-center">
+            <div class=" alert alert-info px-2 pb-0">
+                <h6><b>ALL CLAIMS MUST BE STAGED BEFORE 7:00pm M-F</b></h6>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/js/site.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
