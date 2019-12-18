@@ -1,4 +1,3 @@
-﻿
 /**$(window).load(function () {
     $("#loadContainer > img").fadeOut(500);
     //document.querySelector("#loadingSpinner").style.display = "none"; //makes page more lightweight     
@@ -11,7 +10,6 @@ $(function() {
 	/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	$(document).ready(function() {
 		document.getElementById("loadingGears").style.display = "none";
-
 		var listCount = $("#myTable tbody tr").length;
 
 		if (listCount < 1) {
@@ -42,7 +40,6 @@ $(function() {
 	$("input.select-item").click(function() {
 		var checked = this.checked;
 		console.log(checked);
-
 		var all = $("input.select-all")[0]; // checkSelected();
 		var total = $("input.select-item").length;
 		var len = $("input.select-item:checked:checked").length;
