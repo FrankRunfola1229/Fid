@@ -1,5 +1,4 @@
-﻿
-/**$(window).load(function () {
+﻿/**$(window).load(function () {
     $("#loadContainer > img").fadeOut(500);
     //document.querySelector("#loadingSpinner").style.display = "none"; //makes page more lightweight     
 });

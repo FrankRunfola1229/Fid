@@ -80,3 +80,33 @@ namespace ClaimRejectionInsert_DOTNET
         }
     }
 }
+/**
+{
+  "AdGroupAuthenticate": "AA-DEV-USER-XCCLAIMREJECT",
+  "AllowedHosts": "*",
+ 
+  "ConnectionStrings": {
+    "DevConnection": "Data Source=DEVFCTASE11;Port=47654;Database=APP_CONFIG;Uid=XXXXX;Pwd=XXXXX;",
+    "QualConnection": "Data Source=QAEFCTDBS0101;Port=XXXXX;Database=APP_CONFIG;Uid=XXXXX;Pwd=XXXXX;",
+    "ProdConnection": "Data Source=PRDFCTASE01;Port=XXXXX;Database=APP_CONFIG;Uid=XXXXX;Pwd=XXXXX;",
+    "DefaultConnection1": "Data Source=DEVFCTASE11;Port=47654;Database=APP_CONFIG;Uid=FD179893;Pwd=Ready4gocaleb!;",
+    "DefaultConnection2": "Data Source=DEVPTLASE01;Port=4300;Database=tempdb;Integrated Security=SSPI,8; ConnectionIdleTimeout=2"
+  },
+ 
+  "Secrets": {
+ 
+    "SecretUsername": "srvc_rejclaims",
+    "SecretPassword": "sc0Mii*psEXP&#5Bf(z!4YF9yw4%4C"
+ 
+  },
+ 
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  }
+}
+    });
+});
+
+**/
